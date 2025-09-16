@@ -1,0 +1,245 @@
+/* @import url('./assets/font/Poppins-BlackItalic'); */
+:root{
+  --primary-white: #FFF;
+  --primary-dark: rgba(255,255,255,0);
+  --primary-blue: #3371FF;
+  --primary-red: #f90400b7;
+  --blue-light: #007bff;
+  --wp--preset--color--black: #000000;
+  --wp--preset--color--cyan-bluish-gray: #abb8c3;
+  --wp--preset--color--white: #ffffff;
+  --wp--preset--color--pale-pink: #f78da7;
+  --wp--preset--color--vivid-red: #cf2e2e;
+  --wp--preset--color--luminous-vivid-orange: #ff6900;
+  --wp--preset--color--luminous-vivid-amber: #fcb900;
+  --wp--preset--color--light-green-cyan: #7bdcb5;
+  --wp--preset--color--vivid-green-cyan: #00d084;
+  --wp--preset--color--pale-cyan-blue: #8ed1fc;
+  --wp--preset--color--vivid-cyan-blue: #0693e3;
+  --wp--preset--color--vivid-purple: #9b51e0;
+
+  --wp--preset--font-size--small: 13px;
+  --wp--preset--font-size--medium: 20px;
+  --wp--preset--font-size--large: 36px;
+  --wp--preset--font-size--x-large: 42px;
+
+  --page-color-dark: #07130A;
+  --page-color-light: ##FFFFFF;
+  --white: #fff;
+  --vert-50: #ECF8F0;
+  --vert-100: #D9F2E0;
+  --vert-200: #B3E5C1;
+  --vert-300: #8DD8A2;
+  --vert-400: #67CB83;
+  --vert-500: #42BE65;
+  --vert-600: #349850;
+  --vert-700: #27723C;
+  --vert-800: #1A4C28;
+  --vert-900: #0D2614;
+  --vert-950: #07130A;
+  --vert-opaced: rgba(66, 190, 101, 0.2);
+  --gris-50: #F2F2F2;
+  --gris-100: #E6E6E6;
+  --gris-200: #CCCCCC;
+  --gris-300: #B3B3B3;
+  --gris-400: #999999;
+  --gris-500: #212121;
+  --gris-600: #666666;
+  --gris-700: #4D4D4D;
+  --gris-800: #333333;
+  --gris-900: #1A1A1A;
+  --gris-950: #0D0D0D;
+  --yellow-100: #ffe1b3;
+  --yelow-500: #FFAF33;
+  --error-100: #f6bcbf;
+  --error-500: #ca1c25;
+  --error-opaced: rgba(202, 28, 37, 0.2);
+  --blue-500: #0F62FE;
+  --orange-money: #FF7900;
+  --opaced-text: rgba(255, 255, 255, 0.4);
+  --opaced-bkg: rgba(255, 255, 255, 0.2);
+  --linear-orange: linear-gradient(153.06deg, #FE5858 -0.31%, #EE9617 99.69%);
+  --font-family-sans-serif: 'Sora', sans-serif;
+  /* --font-family-sans-serif: 'josefin-sans', sans-serif; */
+  --font-numeric: 'Poppins', sans-serif;
+
+  /* large device grid value */
+  --grid-ld-width: 80px;
+  --grid-ld-gap: 32px;
+  /* medium device grid value */
+  --grid-md-width: 72px;
+  --grid-md-gap: 12px;
+  /* small device grid value */
+  --grid-sd-width: 72px;
+  --grid-sd-gap: 24px;
+
+  --light-page: #d8dbe0;
+  --dark-page: #040f18;
+  --transition: all 500ms ease;
+}
+
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  font-family: var(--font-family-sans-serif);
+  letter-spacing: -0.01em;
+}
+
+
+body, .full-page{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffff;
+  text-align: left;
+  background-color: #040f18;
+  /* overflow-x: hidden; */
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New,
+    monospace;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('./assets/font/Sora/Sora-ExtraBold.eot');
+  src: url('./assets/font/Sora/Sora-Medium.ttf') format('embedded-opentype'),
+  url('./assets/font/Sora/Sora-SemiBold.ttf') format('truetype'),
+  url('./assets/font/Sora/Sora-ExtraLight.woff') format('woff'),
+  url('./assets/font/Sora/Sora-Thin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+.dark_page{
+  /* background-color: linear-gradient(360deg, rgba(2, 25, 54, 0.955) 0%, rgba(0, 0, 0, 0) 100%), rgba(24, 29, 53, 0.339);
+  backdrop-filter: blur(104px);
+  box-shadow: -2rem 2rem 5rem var(--dark-page); */
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--primary-red) !important;
+}
+@media (max-width: 768px) {
+  .main-info h1{
+    font-size: 1.5rem !important;
+  }
+}
+/* -----------------TYPE-TEXT---------------------------- */
+.typed-text{
+  color: var(--primary-red);
+  font-size: 3em;
+  z-index: 4;
+}
+
+/* .top-bar .navbar-logo {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+} */
+
+.logo{
+  width: 150px;
+  height: 100px;
+  background: url(./assets/logo/logowhite.png) no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.full-page{
+  /* height: 100vh; */
+  /* -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
+  box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39); */
+}
+
+#home-page{
+  /* grid-column: span 6; */
+  background: url(./assets/img/young-black-entreprener-building.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-page{
+  position: relative;
+  background: url(./assets/img/construction-site-4020496_1280.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  /* filter: blur(4px);   */
+}
+
+#service-page{
+  /* height: 100vh; */
+   background: url(./assets/img/architecture.jpg) no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+}
+
+#realisation-page{
+  /* grid-column: span 6; */
+   background: url(./assets/img/crop-architect-opening-blueprint.jpg) no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+}
+
+#contact-page, #container-merci {
+  /* grid-column: span 6; */
+   background: url(./assets/img/img104.jpg) no-repeat;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.full-page{
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.full-page::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  filter: blur(8px);
+  transition: .5s;
+  transform: scale(1.1);
+  z-index: 0;
+}
+.container{
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+} 

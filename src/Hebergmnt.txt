@@ -1,0 +1,110 @@
+Bien sûr ! Voici un guide complet pour déployer une application React sur Vercel, accompagné d'un PDF téléchargeable que tu pourras conserver et imprimer si nécessaire.
+
+📘 Tutoriel : Déployer une application React sur Vercel
+Prérequis
+
+Un projet React fonctionnel (créé avec create-react-app ou Vite).
+
+Un compte sur Vercel
+ (inscription gratuite via GitHub, GitLab ou Bitbucket).
+
+Un dépôt Git pour ton projet (sur GitHub, GitLab ou Bitbucket).
+
+Étape 1 : Préparer ton projet React
+
+Assure-toi que ton projet fonctionne localement :
+
+npm start
+
+
+Crée une version optimisée pour la production :
+
+npm run build
+
+
+Cela génère un dossier build contenant les fichiers prêts pour la production.
+
+Étape 2 : Créer un compte Vercel
+
+Rendez-vous sur https://vercel.com
+.
+
+Cliquez sur "Sign Up" et connectez-vous avec votre compte GitHub, GitLab ou Bitbucket.
+
+Autorisez Vercel à accéder à votre dépôt Git.
+
+Étape 3 : Déployer via Git (méthode recommandée)
+
+Poussez votre projet vers un dépôt Git (si ce n'est pas déjà fait) :
+
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <URL_DE_TON_REPO>
+git push -u origin main
+
+
+Importez votre projet sur Vercel :
+
+Cliquez sur "New Project" dans le tableau de bord Vercel.
+
+Sélectionnez votre dépôt Git.
+
+Vercel détecte automatiquement que c'est une application React.
+
+Vérifiez que les paramètres de build sont corrects :
+
+Build Command : npm run build
+
+Output Directory : build
+
+Déployez votre application :
+
+Cliquez sur "Deploy".
+
+Vercel construira et déploiera votre application.
+
+Une fois le déploiement terminé, une URL unique vous sera fournie pour accéder à votre site en ligne.
+
+Étape 4 : Déployer via la ligne de commande (CLI Vercel)
+
+Installez le CLI Vercel :
+
+npm install -g vercel
+
+
+Déployez votre projet :
+
+Dans le répertoire de votre projet, exécutez :
+
+vercel
+
+
+Suivez les instructions à l'écran pour vous connecter à votre compte Vercel et configurer le déploiement.
+
+Une fois le déploiement terminé, une URL vous sera fournie pour accéder à votre site.
+
+Étape 5 : Personnaliser votre domaine (facultatif)
+
+Ajouter un domaine personnalisé :
+
+Dans le tableau de bord Vercel, accédez à votre projet.
+
+Cliquez sur "Settings" puis sur "Domains".
+
+Cliquez sur "Add", entrez votre nom de domaine et suivez les instructions pour le configurer.
+
+Étape 6 : Mettre à jour votre application
+
+Via Git : Poussez vos modifications vers votre dépôt Git. Vercel détectera automatiquement les changements et redéploiera votre application.
+
+Via CLI : Exécutez à nouveau la commande vercel dans votre terminal pour déployer les modifications.
+
+📥 Télécharger le PDF
+
+Pour obtenir ce tutoriel sous forme de PDF, cliquez sur le lien ci-dessous :
+
+Télécharger le guide PDF
+
+Si tu souhaites un guide plus détaillé ou adapté à un cas spécifique (par exemple, avec un backend Node.js ou une configuration avancée), n'hésite pas à me le faire savoir !

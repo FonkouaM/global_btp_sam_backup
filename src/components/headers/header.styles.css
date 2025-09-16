@@ -1,0 +1,31 @@
+.caroussel{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    margin-top: 3rem;
+    z-index: -1;
+}
+
+.caroussel-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: .8s;
+    transform: transform .8s ease-in-out;
+}
+
+.caroussel-item{
+    width: 100%;
+    height: 50vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caroussel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
