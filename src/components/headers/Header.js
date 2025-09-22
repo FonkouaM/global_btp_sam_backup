@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import ReactTyped from 'react-typed'
+import { Typewriter } from "react-simple-typewriter";
 import Navbar from '../navbar/Navbar'
 import './header.styles.css'
 import caroussel1 from '../../assets/img/working-hard-building-man-construction-worker.jpg'
@@ -38,13 +38,17 @@ const Header = () => {
               <img src={image} alt={`img ${index + 1}`}/>
               <div className='main-info'>
                 <h1>GLOBAL BTP SERVICE AND MANAGMENT</h1>
-                <ReactTyped
-                  className='typed-text'
-                  strings={['Travaux de construction', 'rénovation', 'aménagement', 'petite voirie', 'gestion de projets BTP']}
-                  typeSpeed={40}
-                  backSpeed={70}
-                  loop
-                />
+                <div className="typed-text">
+                  <Typewriter
+                    words={['Travaux de construction', 'rénovation', 'aménagement', 'petite voirie', 'gestion de projets BTP']}
+                    loop={true}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={50}
+                    deleteSpeed={30}
+                    delaySpeed={1000}
+                  />
+                </div>
               </div>
             </div>
           ))}

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import ReactTyped from 'react-typed'
+import { Typewriter } from "react-simple-typewriter";
 // import Oeuvre1 from '../../assets/img/building-new-concrete-houses.jpg'
 // import Oeuvre2 from '../../assets/img/construction-site-4020496_1280.jpg'
 // import Oeuvre3 from '../../assets/img/heavy-machines-construction-workers-working-building.jpg'
@@ -70,15 +70,17 @@ const Realisations = () =>{
                                         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                                     </div>
                                 </div> */}
-                                <ReactTyped
-                                className='typed-text'
-                                strings={[
-                                   '<span style=color:#ffffff;>Nos réalisations sont en cours de mise à jour...</span>'
-                                ]}
-                                typeSpeed={40}
-                                backSpeed={70}
-                                loop
-                                />
+                                <div className="typed-text" style={{ color: "#ffffff" }}>
+                                    <Typewriter
+                                        words={["Nos réalisations sont en cours de mise à jour..."]}
+                                        loop={true}
+                                        cursor
+                                        cursorStyle="|"
+                                        typeSpeed={40}
+                                        deleteSpeed={70}
+                                        delaySpeed={1000}
+                                    />
+                                </div>
                                 {/* <div className="col-md-4">
                                     <img src={Oeuvre4} width='620' height='480' className="img-fluid rounded-start" alt="source"/>
                                 </div> */}
