@@ -29,7 +29,8 @@ nav{
 
 .logo{
   width: 7rem;
-  /* margin-bottom: 1rem; */
+  /* margin: 0.5rem; */
+  /* cursor: pointer; */
 }
 
 .nav__links{
@@ -85,7 +86,7 @@ nav{
       display: none;
   }
   .nav__links li{
-      height: 4rem;
+      height: 3rem;
       width: 100%;
       box-shadow: -2rem 2rem 5rem var(--light-page);
       animation: navAnimation 600ms ease forwards;

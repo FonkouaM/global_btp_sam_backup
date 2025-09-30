@@ -1,5 +1,5 @@
-/* @import url('./assets/font/Poppins-BlackItalic'); */
-:root{
+/* @import url('/assets/font/Poppins-BlackItalic'); */
+:root {
   --primary-white: #FFF;
   --primary-dark: rgba(255,255,255,0);
   --primary-blue: #3371FF;
@@ -24,7 +24,7 @@
   --wp--preset--font-size--x-large: 42px;
 
   --page-color-dark: #07130A;
-  --page-color-light: ##FFFFFF;
+  --page-color-light: #FFFFFF;
   --white: #fff;
   --vert-50: #ECF8F0;
   --vert-100: #D9F2E0;
@@ -60,16 +60,12 @@
   --opaced-bkg: rgba(255, 255, 255, 0.2);
   --linear-orange: linear-gradient(153.06deg, #FE5858 -0.31%, #EE9617 99.69%);
   --font-family-sans-serif: 'Sora', sans-serif;
-  /* --font-family-sans-serif: 'josefin-sans', sans-serif; */
   --font-numeric: 'Poppins', sans-serif;
 
-  /* large device grid value */
   --grid-ld-width: 80px;
   --grid-ld-gap: 32px;
-  /* medium device grid value */
   --grid-md-width: 72px;
   --grid-md-gap: 12px;
-  /* small device grid value */
   --grid-sd-width: 72px;
   --grid-sd-gap: 24px;
 
@@ -78,8 +74,7 @@
   --transition: all 500ms ease;
 }
 
-
-*, *::before, *::after{
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   border: 0;
@@ -91,80 +86,65 @@
   letter-spacing: -0.01em;
 }
 
-
-body, .full-page{
+body, .full-page {
   margin: 0;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
-  color: #ffff;
+  color: #fff;
   text-align: left;
   background-color: #040f18;
-  /* overflow-x: hidden; */
   width: 100%;
   height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New,
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 }
+
+/* @font-face {
+  font-family: 'Sora';
+  src: url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-ExtraBold.eot');
+  src: url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-Medium.ttf') format('truetype'),
+       url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-SemiBold.ttf') format('truetype'),
+       url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-ExtraLight.woff') format('woff'),
+       url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-Thin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+} */
+
 
 @font-face {
   font-family: 'Sora';
   src: url('./assets/font/Sora/Sora-ExtraBold.eot');
   src: url('./assets/font/Sora/Sora-Medium.ttf') format('embedded-opentype'),
-  url('./assets/font/Sora/Sora-SemiBold.ttf') format('truetype'),
-  url('./assets/font/Sora/Sora-ExtraLight.woff') format('woff'),
-  url('./assets/font/Sora/Sora-Thin.woff2') format('woff2');
+       url('./assets/font/Sora/Sora-SemiBold.ttf') format('truetype'),
+       url('./assets/font/Sora/Sora-ExtraLight.woff') format('woff'),
+       url('./assets/font/Sora/Sora-Thin.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
 }
-.dark_page{
-  /* background-color: linear-gradient(360deg, rgba(2, 25, 54, 0.955) 0%, rgba(0, 0, 0, 0) 100%), rgba(24, 29, 53, 0.339);
-  backdrop-filter: blur(104px);
-  box-shadow: -2rem 2rem 5rem var(--dark-page); */
-}
 
-h1, h2, h3, h4, h5{
+.dark_page { }
+
+h1, h2, h3, h4, h5 {
   color: var(--primary-red) !important;
 }
+
 @media (max-width: 768px) {
-  .main-info h1{
+  .main-info h1 {
     font-size: 1.5rem !important;
   }
 }
-/* -----------------TYPE-TEXT---------------------------- */
-.typed-text{
+
+.typed-text {
   color: var(--primary-red);
   font-size: 3em;
   z-index: 4;
 }
 
-/* .top-bar .navbar-logo {
-  display: flex;
-  height: fit-content;
-  width: fit-content;
-} */
-
-.logo{
-  width: 150px;
-  height: 100px;
-  background: url(./assets/logo/logowhite.png) no-repeat;
-  background-size: cover;
-  z-index: 2;
-}
-
-.full-page{
-  /* height: 100vh; */
-  /* -webkit-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
-  -moz-box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39);
-  box-shadow: inset 0px 143px 108px -18px rgba(0, 0, 0, 0.39); */
-}
-
-#home-page{
-  /* grid-column: span 6; */
-  background: url(./assets/img/young-black-entreprener-building.jpg) no-repeat;
+#home-page {
+  /* background: url('./assets/img/young-black-entreprener-building.jpg') no-repeat !important; */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -173,59 +153,54 @@ h1, h2, h3, h4, h5{
   align-items: center;
 }
 
-#about-page{
+#about-page {
   position: relative;
-  background: url(./assets/img/construction-site-4020496_1280.jpg) no-repeat;
+  /* background: url('./assets/img/construction-site-4020496_1280.jpg') no-repeat; */
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  /* filter: blur(4px);   */
 }
 
-#service-page{
-  /* height: 100vh; */
-   background: url(./assets/img/architecture.jpg) no-repeat;
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   align-content: center;
-   justify-content: center;
-   align-items: center;
+#service-page {
+  /* background: url('./assets/img/architecture.jpg') no-repeat; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#realisation-page{
-  /* grid-column: span 6; */
-   background: url(./assets/img/crop-architect-opening-blueprint.jpg) no-repeat;
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   align-content: center;
-   justify-content: center;
-   align-items: center;
+#realisation-page {
+  /* background: url('./assets/img/crop-architect-opening-blueprint.jpg') no-repeat; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #contact-page, #container-merci {
-  /* grid-column: span 6; */
-   background: url(./assets/img/img104.jpg) no-repeat;
-   background-size: cover;
-   display: flex;
-   flex-direction: column;
-   align-content: center;
-   justify-content: center;
-   align-items: center;
+  /* background: url('./assets/img/img104.jpg') no-repeat; */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.full-page{
+.full-page {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
 }
 
-.full-page::before{
+.full-page::before {
   content: "";
   position: absolute;
   top: 0;
@@ -238,8 +213,9 @@ h1, h2, h3, h4, h5{
   transform: scale(1.1);
   z-index: 0;
 }
-.container{
+
+.container {
   position: relative;
   z-index: 1;
   padding: 2rem;
-} 
+}

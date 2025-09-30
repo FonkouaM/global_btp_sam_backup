@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
-
+import BgAbout from "../../assets/img/construction-site-4020496_1280.jpg";
 const About = () =>{
     return(
         <Fragment>
-            <div className="dark_page full-page" id="about-page">
+            <div className="dark_page full-page"
+             id="about-page"
+            style={{ backgroundImage: `url(${BgAbout})` }}>
             <div className="global_container container py-5">
                 <h1 className="mb-4">À propos de nous</h1>
                 <h4 className="lead">Bienvenue sur notre site !</h4>
