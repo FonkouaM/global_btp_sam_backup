@@ -12,7 +12,12 @@ const Realisations = () => {
     <Fragment>
       <div className="dark_page full-page" 
         id="realisation-page"
-        style={{ backgroundImage: `url(${BgRealisation})` }}>
+        style={{ backgroundImage: `url(${BgRealisation})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '100vh', }}>
         <div className="content_container_card card_container">
           <div className="container global_container">
             <h5>NOS REALISATIONS</h5>

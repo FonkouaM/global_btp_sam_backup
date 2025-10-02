@@ -14,6 +14,11 @@ const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [caroussel1, caroussel2, caroussel3, caroussel4, caroussel5];
 
+
+  useEffect(() => {
+    console.log(caroussel1); // <- ici
+  }, []);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);

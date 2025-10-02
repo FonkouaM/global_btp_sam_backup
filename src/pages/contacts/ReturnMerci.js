@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BgMerci from "../../assets/img/img104.jpg";
 
 const ReturnMerci = () => {
   const [countdown, setCountdown] = useState(5);
@@ -18,7 +19,14 @@ const ReturnMerci = () => {
   }, [countdown, navigate]);
 
   return (
-    <div className="container py-5 text-center">
+    <div className="container py-5 text-center"
+    id="realisation-page"
+        style={{ backgroundImage: `url(${BgMerci})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '100vh', }}>
       <h1 className="text-success">✅ Merci !</h1>
       <p>Votre message a bien été envoyé. Nous vous contacterons rapidement.</p>
       <p>

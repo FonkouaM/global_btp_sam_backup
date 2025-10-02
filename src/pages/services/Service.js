@@ -14,7 +14,12 @@ const Service = () => {
     <Fragment>
       <div className="dark_page full-page" 
         id="service-page"
-        style={{ backgroundImage: `url(${BgService})` }}>
+        style={{ backgroundImage: `url(${BgService})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        minHeight: '100vh',}}>
         <section className="section_services" id="services">
           <span className="section-subtitle">GLOB-sm</span>
           <h2 className="section-title">Nos services</h2>

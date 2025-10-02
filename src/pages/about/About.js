@@ -5,7 +5,12 @@ const About = () =>{
         <Fragment>
             <div className="dark_page full-page"
              id="about-page"
-            style={{ backgroundImage: `url(${BgAbout})` }}>
+            style={{ backgroundImage: `url(${BgAbout})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100vh', }}>
             <div className="global_container container py-5">
                 <h1 className="mb-4">À propos de nous</h1>
                 <h4 className="lead">Bienvenue sur notre site !</h4>

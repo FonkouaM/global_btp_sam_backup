@@ -12,8 +12,12 @@ const Home = () => {
       <div 
         className="dark_page full-page" 
         id="home-page"
-        style={{ backgroundImage: `url(${BgHome})` }}
-      >
+        style={{ backgroundImage: `url(${BgHome})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '100vh', }}>
         <div className="home global_container" id="home">
           <section className="project section">
             <div className="project__container bd-grid">
