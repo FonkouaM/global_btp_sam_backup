@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 // Import depuis src/assets/img
-import BgHome from "../../assets/img/young-black-entreprener-building.jpg";
+import BgHome from "../../assets/img/home_entreprener.jpg";
 import Building from "../../assets/icon/14345-removebg-preview.png";
 import HBuilding from "../../assets/icon/architech-removebg-preview.png";
 

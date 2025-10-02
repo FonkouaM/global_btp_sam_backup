@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import BgRealisation from "../../assets/img/crop-architect-opening-blueprint.jpg";
+import BgRealisation from "../../assets/img/blueprint.jpg";
 const Realisations = () => {
   // Chemins absolus vers le dossier public/assets/img
 //   const Oeuvre1 = "/assets/img/building-new-concrete-houses.jpg";

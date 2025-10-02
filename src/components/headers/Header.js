@@ -4,11 +4,11 @@ import Navbar from '../navbar/Navbar';
 import './header.styles.css';
 
 // Import des images depuis src/assets/img
-import caroussel1 from '../../assets/img/working-hard-building-man-construction-worker.jpg';
+import caroussel1 from '../../assets/img/hard_building.jpg';
 import caroussel2 from '../../assets/img/architecture.jpg';
-import caroussel3 from '../../assets/img/heavy-machines-construction-workers-working-building.jpg';
-import caroussel4 from '../../assets/img/building-new-concrete-houses.jpg';
-import caroussel5 from '../../assets/img/construction-collective.jpg';
+import caroussel3 from '../../assets/img/machines_building.jpg';
+import caroussel4 from '../../assets/img/new_houses.jpg';
+import caroussel5 from '../../assets/img/new_construction.jpg';
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

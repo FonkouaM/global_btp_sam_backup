@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import BgAbout from "../../assets/img/construction-site-4020496_1280.jpg";
+import BgAbout from "../../assets/img/site_construction.jpg";
 const About = () =>{
     return(
         <Fragment>
