@@ -36,8 +36,9 @@ const Header = () => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="caroussel-item">
-              <img src={image} alt={`img ${index + 1}`} />
+            <div key={index} className="caroussel-item"
+            style={{ backgroundImage: `url(${image})` }}
+            >
               <div className='main-info'>
                 <h1>GLOBAL BTP SERVICE AND MANAGMENT</h1>
                 <div className="typed-text" style={{ color: "#f90400b7" }}>

@@ -39,6 +39,5 @@ const Home = () => {
     </Fragment>
   );
 };
-console.log("BgHome =", BgHome);
 
 export default Home;

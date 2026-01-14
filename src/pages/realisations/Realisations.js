@@ -2,11 +2,6 @@ import React, { Fragment } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import BgRealisation from "../../assets/img/blueprint.jpg";
 const Realisations = () => {
-  // Chemins absolus vers le dossier public/assets/img
-//   const Oeuvre1 = "/assets/img/building-new-concrete-houses.jpg";
-//   const Oeuvre2 = "/assets/img/construction-site-4020496_1280.jpg";
-//   const Oeuvre3 = "/assets/img/heavy-machines-construction-workers-working-building.jpg";
-//   const Oeuvre4 = "/assets/img/construction-collective.jpg";
 
   return (
     <Fragment>

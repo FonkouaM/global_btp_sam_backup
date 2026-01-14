@@ -38,7 +38,7 @@ const Contact = () => {
           method="POST"
         >
           {/* Champs cachés FormSubmit */}
-          <input type="hidden" name="_next" value="/merci"/>
+          <input type="hidden" name="_next" value="https://global-btp-sam-backup.vercel.app/merci"/>
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
 

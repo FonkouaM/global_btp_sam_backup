@@ -4,28 +4,35 @@
     height: 50vh;
     overflow: hidden;
     margin-top: 3rem;
-    z-index: -1;
+    z-index: 2; /* 🔴 CORRECTION MAJEURE */
+}
+
+.caroussel img {
+  position: relative;
+  z-index: 2;
 }
 
 .caroussel-inner{
     width: 100%;
     height: 100%;
     display: flex;
-    transition: .8s;
-    transform: transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; /* 🔴 CORRECTION */
 }
 
 .caroussel-item{
     width: 100%;
-    height: 50vh;
+    height: 100%;
     flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .caroussel-item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
