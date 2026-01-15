@@ -13,8 +13,8 @@ import './footer.styles.css';
 const Footer = () => {
   return (
     <Fragment>
-      <footer className="section-footer bt-footer" id="footer">
-        <div className="footer-bg">
+      <footer className="footer" id="footer">
+        <div className="footer-container">
           <div className="footer-logo">
             <Link className="link_to" to="/"><img src={Logo} alt="Logo" /></Link>
             <p>Faites-vous assister par nos agents.</p>
@@ -22,17 +22,17 @@ const Footer = () => {
 
           <div className="lien_utile">
             <h4>Liens utiles</h4>
-            <Link className="link_to" to="/">Accueil</Link>
-            <Link className="link_to" to="/contact">Contacts</Link>
-            <Link className="link_to" to="/services">Services</Link>
+            <Link className="link_to" to="/">Accueil</Link><br/>
+            <Link className="link_to" to="/contact">Contacts</Link><br/>
+            <Link className="link_to" to="/services">Services</Link><br/>
             <Link className="link_to" to="/realisations">Nos réalisations</Link>
           </div>
 
           <div className="formation">
             <h4>Nos services</h4>
-            <Link className="link_to" to="/services">Construction légère</Link>
-            <Link className="link_to" to="/services">Rénovation de domiciles</Link>
-            <Link className="link_to" to="/services">Aménagements extérieurs</Link>
+            <Link className="link_to" to="/services">Construction légère</Link><br/>
+            <Link className="link_to" to="/services">Rénovation de domiciles</Link><br/>
+            <Link className="link_to" to="/services">Aménagements extérieurs</Link><br/>
             <Link className="link_to" to="/services">Entretien particuliers & PME</Link>
           </div>
 
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="copyright">
+        <div className="footer-bottom">
             Global BTP service and management © 2025 Developed by <span>KFM_Magdev</span>
         </div>
       </footer>

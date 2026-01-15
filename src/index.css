@@ -1,196 +1,85 @@
-/* @import url('/assets/font/Poppins-BlackItalic'); */
+/* ==============================
+   VARIABLES GLOBALES
+================================ */
 :root {
-  --primary-white: #FFF;
-  --primary-dark: rgba(255,255,255,0);
-  --primary-blue: #3371FF;
+  /* Fonts */
+  --body-font: 'Poppins', sans-serif;
+  --heading-font: 'Sora', sans-serif;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Font sizes */
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+
+  /* Colors */
+  --nav-height: 80px;
   --primary-red: #f90400b7;
-  --blue-light: #007bff;
-  --wp--preset--color--black: #000000;
-  --wp--preset--color--cyan-bluish-gray: #abb8c3;
-  --wp--preset--color--white: #ffffff;
-  --wp--preset--color--pale-pink: #f78da7;
-  --wp--preset--color--vivid-red: #cf2e2e;
-  --wp--preset--color--luminous-vivid-orange: #ff6900;
-  --wp--preset--color--luminous-vivid-amber: #fcb900;
-  --wp--preset--color--light-green-cyan: #7bdcb5;
-  --wp--preset--color--vivid-green-cyan: #00d084;
-  --wp--preset--color--pale-cyan-blue: #8ed1fc;
-  --wp--preset--color--vivid-cyan-blue: #0693e3;
-  --wp--preset--color--vivid-purple: #9b51e0;
-
-  --wp--preset--font-size--small: 13px;
-  --wp--preset--font-size--medium: 20px;
-  --wp--preset--font-size--large: 36px;
-  --wp--preset--font-size--x-large: 42px;
-
-  --page-color-dark: #07130A;
-  --page-color-light: #FFFFFF;
-  --white: #fff;
-  --vert-50: #ECF8F0;
-  --vert-100: #D9F2E0;
-  --vert-200: #B3E5C1;
-  --vert-300: #8DD8A2;
-  --vert-400: #67CB83;
-  --vert-500: #42BE65;
-  --vert-600: #349850;
-  --vert-700: #27723C;
-  --vert-800: #1A4C28;
-  --vert-900: #0D2614;
-  --vert-950: #07130A;
-  --vert-opaced: rgba(66, 190, 101, 0.2);
-  --gris-50: #F2F2F2;
-  --gris-100: #E6E6E6;
-  --gris-200: #CCCCCC;
-  --gris-300: #B3B3B3;
-  --gris-400: #999999;
-  --gris-500: #212121;
-  --gris-600: #666666;
-  --gris-700: #4D4D4D;
-  --gris-800: #333333;
-  --gris-900: #1A1A1A;
-  --gris-950: #0D0D0D;
-  --yellow-100: #ffe1b3;
-  --yelow-500: #FFAF33;
-  --error-100: #f6bcbf;
-  --error-500: #ca1c25;
-  --error-opaced: rgba(202, 28, 37, 0.2);
-  --blue-500: #0F62FE;
-  --orange-money: #FF7900;
-  --opaced-text: rgba(255, 255, 255, 0.4);
-  --opaced-bkg: rgba(255, 255, 255, 0.2);
-  --linear-orange: linear-gradient(153.06deg, #FE5858 -0.31%, #EE9617 99.69%);
-  --font-family-sans-serif: 'Sora', sans-serif;
-  --font-numeric: 'Poppins', sans-serif;
-
-  --grid-ld-width: 80px;
-  --grid-ld-gap: 32px;
-  --grid-md-width: 72px;
-  --grid-md-gap: 12px;
-  --grid-sd-width: 72px;
-  --grid-sd-gap: 24px;
-
-  --light-page: #d8dbe0;
+  --primary-white: #fff;
   --dark-page: #040f18;
-  --transition: all 500ms ease;
+  --light-page: #d8dbe0;
+
+  --first-color: #CC4B2C;
+  --first-color-dark: #662616;
+  --first-color-lighten: #FFFAFA;
+
+  --transition: all 0.4s ease;
+  --header-height: 80px;
+  --z-fixed: 100;
 }
 
+/* ==============================
+   RESET
+================================ */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  border: 0;
-  outline: 0;
-  list-style: none;
-  text-decoration: none !important;
   box-sizing: border-box;
-  font-family: var(--font-family-sans-serif);
-  letter-spacing: -0.01em;
+  font-family: var(--body-font);
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-body, .full-page {
-  margin: 0;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
   font-size: 16px;
-  font-weight: 300;
   line-height: 1.5;
-  color: #fff;
-  text-align: left;
-  background-color: #040f18;
-  width: 100%;
-  height: 100%;
+  color: var(--primary-white);
+  background-color: var(--dark-page);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
-}
 
-/* @font-face {
-  font-family: 'Sora';
-  src: url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-ExtraBold.eot');
-  src: url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-Medium.ttf') format('truetype'),
-       url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-SemiBold.ttf') format('truetype'),
-       url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-ExtraLight.woff') format('woff'),
-       url(process.env.PUBLIC_URL + '/assets/font/Sora/Sora-Thin.woff2') format('woff2');
-  font-style: normal;
-  font-weight: normal;
-} */
-
-
-@font-face {
-  font-family: 'Sora';
-  src: url('./assets/font/Sora/Sora-ExtraBold.eot');
-  src: url('./assets/font/Sora/Sora-Medium.ttf') format('embedded-opentype'),
-       url('./assets/font/Sora/Sora-SemiBold.ttf') format('truetype'),
-       url('./assets/font/Sora/Sora-ExtraLight.woff') format('woff'),
-       url('./assets/font/Sora/Sora-Thin.woff2') format('woff2');
-  font-style: normal;
-  font-weight: normal;
-}
-
-.dark_page { }
-
+/* ==============================
+   TYPOGRAPHIE
+================================ */
 h1, h2, h3, h4, h5 {
-  color: var(--primary-red) !important;
+  font-family: var(--heading-font);
+  font-weight: var(--font-bold);
+  color: var(--first-color) !important;
 }
 
-@media (max-width: 768px) {
-  .main-info h1 {
-    font-size: 1.5rem !important;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.typed-text {
-  color: var(--primary-red);
-  font-size: 3em;
-  z-index: 4;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-/* #home-page {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  width: '100%';
-  height: '100vh'
-}
-
-#about-page {
-  position: relative;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-#service-page {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-#realisation-page {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-#contact-page, #container-merci {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-} */
-
+/* ==============================
+   UTILITIES
+================================ */
 .full-page {
   position: relative;
   min-height: 100vh;
@@ -200,19 +89,23 @@ h1, h2, h3, h4, h5 {
 .full-page::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, .5);
-  filter: blur(8px);
-  transition: .5s;
-  transform: scale(1.1);
+  inset: 0;
+  background: rgba(0,0,0,0.45);
   z-index: 0;
 }
 
-.container {
+.container, .global_container {
   position: relative;
   z-index: 1;
   padding: 2rem;
+}
+
+.dark_page {}
+
+/* ==============================
+   FONTS
+================================ */
+@font-face {
+  font-family: 'Sora';
+  src: url('./assets/font/Sora/Sora-Medium.ttf') format('truetype');
 }

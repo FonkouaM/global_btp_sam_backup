@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Navbar from '../navbar/Navbar';
 import './header.styles.css';
 
-// Import des images depuis src/assets/img
+// Images caroussel
 import caroussel1 from '../../assets/img/hard_building.jpg';
 import caroussel2 from '../../assets/img/architecture.jpg';
 import caroussel3 from '../../assets/img/machines_building.jpg';
@@ -14,54 +14,50 @@ const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [caroussel1, caroussel2, caroussel3, caroussel4, caroussel5];
 
-
-  useEffect(() => {
-    console.log(caroussel1); // <- ici
-  }, []);
-
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentIndex(prev => (prev + 1) % images.length);
     }, 3000);
-    
     return () => clearInterval(intervalId);
   }, [images.length]);
+console.log(caroussel1);
 
   return (
     <Fragment>
       <Navbar/>
-      <div className="header-wrapper caroussel">
-        <div 
-          className="caroussel-inner" 
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <div key={index} className="caroussel-item"
+      <header className="header-wrapper caroussel">
+      <div className="caroussel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {images.map((image, idx) => (
+          <div
+            key={image}
+            className="caroussel-item"
             style={{ backgroundImage: `url(${image})` }}
-            >
-              <div className='main-info'>
-                <h1>GLOBAL BTP SERVICE AND MANAGMENT</h1>
-                <div className="typed-text" style={{ color: "#f90400b7" }}>
-                  <Typewriter
-                    words={['Travaux de construction',
-                      'Rénovation',
-                      'Aménagement',
-                      'Petite voirie',
-                      'Gestion de projets BTP'
-                    ]}
-                    loop={true}
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={50}
-                    deleteSpeed={30}
-                    delaySpeed={1000}
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
+          />
+        ))}
+      </div>
+
+      {/* Texte fixe centré */}
+      <div className="main-info">
+    <h1>GLOBAL BTP SERVICE AND MANAGEMENT</h1>
+    <div className="typed-text">
+      <Typewriter
+        words={[
+          'Travaux de construction',
+          'Rénovation',
+          'Aménagement',
+          'Petite voirie',
+          'Gestion de projets BTP'
+        ]}
+        loop={true}
+        cursor
+        cursorStyle="|"
+        typeSpeed={50}
+        deleteSpeed={30}
+        delaySpeed={1000}
+      />
         </div>
       </div>
+      </header>
     </Fragment>
   );
 };
