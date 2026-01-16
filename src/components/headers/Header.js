@@ -29,7 +29,7 @@ console.log(caroussel1);
       <div className="caroussel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((image, idx) => (
           <div
-            key={image}
+            key={idx}
             className="caroussel-item"
             style={{ backgroundImage: `url(${image})` }}
           />

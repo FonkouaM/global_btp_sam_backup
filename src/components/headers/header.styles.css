@@ -1,28 +1,33 @@
+/* ===============================
+   HEADER WRAPPER
+================================ */
 .header-wrapper {
   position: relative;
-  padding-top: 0; /* navbar fixe */
   margin: 0;
-  margin-top: -10px;
+  padding-top: var(--header-height, 80px); /* espace réservé à la navbar */
 }
 
-/* Carousel container */
+/* ===============================
+   CAROUSEL
+================================ */
 .caroussel {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 70vh; /* desktop confortable */
+  min-height: 420px;
   overflow: hidden;
 }
 
 /* Track */
 .caroussel-inner {
   display: flex;
-  width: 100%;
   height: 100%;
   transition: transform 0.8s ease-in-out;
 }
 
 /* Slide */
 .caroussel-item {
+  position: relative; /* IMPORTANT pour l’overlay */
   flex: 0 0 100%;
   height: 100%;
   background-size: cover;
@@ -30,7 +35,7 @@
   background-repeat: no-repeat;
 }
 
-/* Overlay sur les images */
+/* Overlay sombre */
 .caroussel-item::before {
   content: "";
   position: absolute;
@@ -39,48 +44,56 @@
   z-index: 1;
 }
 
-/* Texte fixe centré */
+/* ===============================
+   TEXTE FIXE CENTRÉ
+================================ */
 .main-info {
-  position: absolute; /* fixe par rapport à header-wrapper */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  inset: 0; /* centre parfait */
   z-index: 2;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   text-align: center;
   padding: 1rem;
-  pointer-events: none; /* ne bloque pas les clics sur le carousel si besoin */
+  pointer-events: none;
 }
 
 .main-info h1 {
   background: #042d4e;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-weight: var(--font-bold);
-  font-size: clamp(0.9rem, 2vw, 1.2rem);
-  white-space: nowrap;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   color: #fff;
 }
 
 .typed-text {
   margin-top: 1rem;
-  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.5rem);
   color: #f90400b7;
 }
 
-
-/* Responsive */
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
   .caroussel {
-    height: 40vh;
+    height: 55vh;
+    min-height: 360px;
   }
 }
 
 @media (max-width: 480px) {
   .caroussel {
-    height: 35vh;
+    height: 45vh;
+    min-height: 300px;
+  }
+
+  .main-info h1 {
+    font-size: 0.95rem;
   }
 }
