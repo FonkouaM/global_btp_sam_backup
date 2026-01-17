@@ -116,7 +116,24 @@ img {
 /* ==============================
    FONTS
 ================================ */
+
 @font-face {
   font-family: 'Sora';
   src: url('./assets/font/Sora/Sora-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('./assets/font/Sora/Sora-Thin.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('./assets/font/Sora/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }

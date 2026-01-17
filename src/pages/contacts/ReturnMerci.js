@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BgMerci from "../../assets/img/btp_bg.jpg";
+
+const BgMerci = '/assets/img/btp_bg.jpg';
+
 
 const ReturnMerci = () => {
   const [countdown, setCountdown] = useState(5);

@@ -1,14 +1,13 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-
-// 🔹 Import des images depuis src/assets
-import Logo from '../../assets/logo/logoblack.png';
-import Whatsapp from '../../assets/icon/whatsapp.png';
-import Facebook from '../../assets/icon/facebook.png';
-import Telegram from '../../assets/icon/telegram.png';
-import Snapchat from '../../assets/icon/snapchat.png';
-
 import './footer.styles.css';
+
+// 🔹 Logos et icônes depuis public/assets
+const Logo = '/assets/logo/logoblack.png';
+const Whatsapp = '/assets/icon/whatsapp.png';
+const Facebook = '/assets/icon/facebook.png';
+const Telegram = '/assets/icon/telegram.png';
+const Snapchat = '/assets/icon/snapchat.png';
 
 const Footer = () => {
   return (

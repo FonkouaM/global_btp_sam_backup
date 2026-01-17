@@ -3,7 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 import { MdOutlineClose, MdMenu } from "react-icons/md";
 import { links } from "../../data";
 import './navbar.styles.css';
-import Logo from '../../assets/logo/logowhite.png';
+
+// 🔹 Logo depuis public/assets
+const Logo = '/assets/logo/logowhite.png';
 
 const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);

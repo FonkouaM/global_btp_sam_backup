@@ -1,27 +1,24 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 
-// Import depuis src/assets/img
-import BgHome from "../../assets/img/home_entreprener.jpg";
-import Building from "../../assets/icon/14345-removebg-preview.png";
-import HBuilding from "../../assets/icon/architech-removebg-preview.png";
-
 const Home = () => {
   return (
     <Fragment>
       <div 
         className="dark_page full-page" 
         id="home-page"
-        style={{ backgroundImage: `url(${BgHome})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        height: '100vh', }}>
+        style={{ 
+          backgroundImage: `url(/assets/img/home_entreprener.jpg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          width: '100%',
+          height: '100vh',
+        }}>
         <div className="home global_container" id="home">
           <section className="project section">
             <div className="project__container bd-grid">
-              <img src={Building} alt="Projets realises" className="project__img"/>
+              <img src="/assets/icon/14345-removebg-preview.png" alt="Projets realises" className="project__img"/>
               <div className="project__data">
                 <h2 className="section-title project__title">
                   Construisons l’avenir ensemble !
@@ -31,7 +28,7 @@ const Home = () => {
                 </p>
                 <Link to="/contact" className="button button__light">Contactez-nous</Link>
               </div>
-              <img src={HBuilding} alt="Projets realises" className="project__img"/>
+              <img src="/assets/icon/architech-removebg-preview.png" alt="Projets realises" className="project__img"/>
             </div>
           </section>
         </div>

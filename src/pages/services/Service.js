@@ -1,25 +1,18 @@
 import React, { Fragment } from "react";
-import BgService from "../../assets/img/architecture.jpg";
-import Icon1 from "../../assets/icon/workers.png";
-import Icon2 from "../../assets/icon/construction.png";
-import Icon3 from "../../assets/icon/pickaxe.png";
-import Icon4 from "../../assets/icon/sketch.png";
-import Icon5 from "../../assets/icon/road.png";
-import Icon6 from "../../assets/icon/brickwall.png";
 
 const Service = () => {
-  // Chemins absolus vers public/assets/icon
-
   return (
     <Fragment>
       <div className="dark_page full-page" 
-        id="service-page"
-        style={{ backgroundImage: `url(${BgService})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        minHeight: '100vh',}}>
+           id="service-page"
+           style={{ 
+             backgroundImage: `url(/assets/img/architecture.jpg)`,
+             backgroundSize: 'cover',
+             backgroundPosition: 'center',
+             backgroundRepeat: 'no-repeat',
+             width: '100%',
+             minHeight: '100vh',
+           }}>
         <section className="section_services" id="services">
           <span className="section-subtitle">GLOB-sm</span>
           <h2 className="section-title">Nos services</h2>
@@ -27,7 +20,7 @@ const Service = () => {
           <div className="services__container bd-grid">
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon1} alt="source" />
+                <img className="services__icon" src="/assets/icon/workers.png" alt="source" />
               </div>
               <h3 className="services__title">Location de matériel léger de BTP</h3>
               <p className="services__description">bétonnière, échafaudages, etc.</p>
@@ -35,7 +28,7 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon2} alt="source" />
+                <img className="services__icon" src="/assets/icon/construction.png" alt="source" />
               </div>
               <h3 className="services__title">Rénovation d’immeubles et maisons</h3>
               <p className="services__description">peinture, carrelage, plomberie, électricité de base</p>
@@ -43,7 +36,7 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon3} alt="source" />
+                <img className="services__icon" src="/assets/icon/pickaxe.png" alt="source" />
               </div>
               <h3 className="services__title">Petite voirie urbaine et rurale</h3>
               <p className="services__description">pistes, caniveaux</p>
@@ -51,7 +44,7 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon4} alt="source" />
+                <img className="services__icon" src="/assets/icon/sketch.png" alt="source" />
               </div>              
               <h3 className="services__title">Études techniques et gestion de projets BTP</h3>
               <p className="services__description">planning, budget, suivi de chantier</p>
@@ -59,7 +52,7 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon5} alt="source" />
+                <img className="services__icon" src="/assets/icon/road.png" alt="source" />
               </div>              
               <h3 className="services__title">Construction de bâtiments</h3>
               <p className="services__description">logements, commerces, bureaux</p>
@@ -67,15 +60,16 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon6} alt="source" />
+                <img className="services__icon" src="/assets/icon/brickwall.png" alt="source" />
               </div>              
               <h3 className="services__title">Aménagement extérieur</h3>
               <p className="services__description">clôtures, pavés, drainage, fosses, rigoles, jardins, etc.</p>
             </div>
 
+            {/* Répétition des icônes pour les autres services */}
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon4} alt="source" />
+                <img className="services__icon" src="/assets/icon/sketch.png" alt="source" />
               </div>              
               <h3 className="services__title">Études et conception</h3>
               <p className="services__description">
@@ -87,7 +81,7 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon5} alt="source" />
+                <img className="services__icon" src="/assets/icon/road.png" alt="source" />
               </div>              
               <h3 className="services__title">Rénovation et réhabilitation</h3>
               <p className="services__description">
@@ -100,8 +94,9 @@ const Service = () => {
 
             <div className="services__content">
               <div className="services__icon-wrapper">
-                <img className="services__icon" src={Icon6} alt="source" />
-              </div>              <h3 className="services__title">Briquettes auto bloquant</h3>
+                <img className="services__icon" src="/assets/icon/brickwall.png" alt="source" />
+              </div>              
+              <h3 className="services__title">Briquettes auto bloquant</h3>
               <p className="services__description">
                 Fourniture et pose de briquettes* pour murs porteurs ou cloisons<br/>
                 - *Construction de murs en briquettes stabilisées* (BTC)<br/>
